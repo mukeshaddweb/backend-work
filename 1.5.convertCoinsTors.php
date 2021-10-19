@@ -1,13 +1,13 @@
 <?php
-    $coins_of50 =23;
-    $coins_of25 = 3;
-    $coins_of20 = 4;
-    $coins_of10 = 5;
-    $coins_of5 =2;
-    $coins_of2 = 8;
-    $coins_of1 = 10;
+    $coins_of50 =20;
+    $coins_of25 = 44;
+    $coins_of20 = 50;
+    $coins_of10 = 10;
+    $coins_of5 =40;
+    $coins_of2 = 100;
+    $coins_of1 = 200;
 
-    $total_Rs = $coins_of50*50 + $coins_of25*25 + $coins_of20*20 + $coins_of10*10 + $coins_of5*5 + $coins_of2*2 + $coins_of1*1;
+    $total_Rs = $coins_of50/2 + $coins_of25/4 + $coins_of20/5 + $coins_of10/10 + $coins_of5/20 + $coins_of2/50 + $coins_of1/100;
     
 
     echo "<br>Coins of 50 : ".$coins_of50."<br>";

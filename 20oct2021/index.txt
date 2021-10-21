@@ -1,0 +1,19 @@
+7. WAP to read cost price and selling price of an item and find out how much loss or profit
+occurs.
+8. WAP to read marks of three subjects of a student and print total, percentage and
+division.
+9. WAP to read character and find out whether it is upper case latter, lower case latter, digit or special symbol.
+10. WAP to read three numbers and find out maximum.
+11. WAP to read four numbers and find out maximum.
+12. WAP to read a number and calculate factorial.(using for loop)
+13. WAP to read a number and check whether it is prime or not.(using for loop)(can be div
+by 2)
+14. WAP to read a number and print its reverse.(using while loop)
+15. WAP to read a number and sum of its digits(using while loop)
+16. WAP to read a number and check whether its Armstrong or not.(using while loop)((Sum
+of xQube)=x. like153)
+17. WAP to read a number and check whether it is Perfect or not.(using for loop)
+18. WAP to read a number and check whether it is Palindrome or not.(using while
+loop)(121,474…)
+19. WAP to read n number and find out maximum.(using do-while)
+20. WAP to read to read a n digit number and print how much digits are available in the number.(using while and do-while)

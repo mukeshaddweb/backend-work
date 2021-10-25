@@ -1,0 +1,18 @@
+1. Read an array and print sum of its elements.
+2. Read an array and print its reverse.
+3. Read an array and count total no. of even and odd eliments.
+4. Read an array and find our max and second max.
+5. Read an array and find out max and min.
+6. Read an array and count total no. of +ve, -ve and zero eliments.
+7. Read an array and count no. of eliment which are divisible by 5.
+8. Read an array and perfume LINEEAR Search.
+9. Read an array and perfume BINARY Search.
+10. Read two array of same dimension and swap their elements.
+11. Read two array of same dimension and swap their elements index by index into third.
+12. Read an array and print it in ascending order.(SORTING)
+13. Read an array and print sum of elements stored at even indexes.
+14. Read an array and check whether its elements are stored In Palindrome form or not.
+15. Read an array and find out how many elements are prime.
+16. Read a 2D array and print sum of its elements.
+17. Read a 2D array and print sum of its individual rows.
+18. Read a 2D array and print sum of its individual columns.

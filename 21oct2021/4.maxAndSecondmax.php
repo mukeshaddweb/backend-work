@@ -24,11 +24,7 @@
                 	$secondmax = $a[$i];
             		}		
 		}
-		//printing array
-        foreach($a as $element){
-            echo $element." ";
-        }
-        echo "<br>";
+		print_r($a);
         	echo "<br><br>Max is ${max}.<br>Second max is ${secondmax}.";	
 	}
     }

@@ -1,7 +1,5 @@
 <?php
 
- // 9. Read an array and perfume BINARY Search.
-
     $arr = array(5,6,7,12,18,25);
     $num = 7;
 

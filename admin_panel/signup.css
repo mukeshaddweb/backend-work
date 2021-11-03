@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.form {
+    width: 500px;
+    height: 750px;
+    border: solid black;
+    border-radius: 30px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px auto;
+    margin: 100px auto;
+}
+
+form {
+    margin: 40px auto;
+}
+
+input {
+        font-size: 23px;
+    margin: 15px auto;
+    border-radius: 10px;
+    padding: 9px;
+    /*background: #590707;*/
+    color: black;
+    border-color: firebrick;
+    box-shadow: 5px 5px 13px -1px firebrick;
+}
+
+
+textarea{
+    font-size: 23px;
+    margin: 15px auto;
+    border-radius: 10px;
+    padding: 9px;
+    /*background: #590707;*/
+    color: black;
+    border-color: firebrick;
+    box-shadow: 5px 5px 13px -1px firebrick;
+}

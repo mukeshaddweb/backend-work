@@ -1,0 +1,84 @@
+<?php
+    include "connection.php";
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Login</title>
+    <style>
+        .form{
+            width:50%;
+            margin-left: 320px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .navbar-brand{
+          margin-left: 600px;
+        }
+    </style>
+  </head>
+  <body>
+   <!-- ........nav start..... -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand border px-3" href="home.php">YourShop</a>
+        </div>
+      </nav>
+    <!-- ............nav ends.......... -->
+
+    <div class="form">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+                
+            <input type="submit" name="login" value="Login" class="btn btn-primary">
+            <input type="submit" name="signup" value="Sign Up" class="btn btn-primary">
+          </form>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<?php
+    if(isset($_POST['login'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+            $sql = mysqli_query($con, "select * from admins where email='$email' and password='$password'") or die("login query failed.");
+            $rows = mysqli_num_rows($sql);
+            $row = mysqli_fetch_array($sql);
+            if($rows>0){
+                echo "login successfull.";
+                session_start();
+                $_SESSION['aname']=$row['name'];
+                $_SESSION['aemail']=$row['email'];
+                header('Location:dashboard.php');
+            }else{
+                echo "incorrect username or password.";
+            }
+
+    }
+    if(isset($_POST['signup'])){
+      header('Location:add_admin.php');
+    }
+?>
+
+

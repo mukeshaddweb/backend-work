@@ -3,6 +3,16 @@
 import pymysql
 import cgi,cgitb
 cgitb.enable()
+# from http import cookies
+# C = cookies.SimpleCookie()
+# print(C.output(attrs=[], header="Cookie:"))
+# import login
+# adminEmail = login.student_email
+
+# C = cookies.SimpleCookie()
+# adminName = C["adminName"]
+#         C["adminName"]["path"] = "/cookie"
+
 
 db= pymysql.connect(host= "localhost", user="root",password="",database="PySchool")
 
@@ -18,6 +28,9 @@ print("<title>dashboard</title>")
 print("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>")
 print("</head>")
 print("<body>")
+
+# print("<h1 class='text-center mb-2 text-primary bg-light py-3'>%s</h1>"%(adminName))
+
 print("<a href='insert.html' class='btn btn-primary mx-5 my-3'>Insert</a>")
 print("<a href='login.html' class='btn btn-primary mx-5 my-3'>logout</a>")
 print("<h1 class='text-center mb-2 text-primary bg-light py-3'>Student  Information</h1>")

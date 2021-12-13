@@ -27,6 +27,14 @@ try:
     cursor.execute("update students set student_name='%s', student_email='%s',student_branch='%s', student_password='%s' where student_id='%s'"%(update_student_name, update_student_email, update_student_branch,update_student_password, student_id))
 
     db.commit()
+
+    # ...........redirecting..............
+    redirectURL = "http://localhost/python/admin_panel/dashboard.py"
+    print('<html>')
+    print('  <head>')
+    print('    <meta http-equiv="refresh" content="0;url='+str(redirectURL)+'" />') 
+    print('  </head>')
+    print('</html>')
     
     print("<a href='dashboard.py' class='btn btn-primary mx-5 my-5'>Dashboard</a>")
     print("<a href='login.html' class='btn btn-primary mx-5 my-5'>logout</a>")

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import pymysql
 import cgi,cgitb
+# from http import cookies
 
 # from pymysql.cursors import Cursor
 cgitb.enable()
@@ -30,9 +31,21 @@ try:
 
     if(data):
         student_name = data[1]
-        print("<a href='dashboard.py' class='btn btn-primary mx-5 my-5'>Dashboard</a>")
-        print("<a href='login.html' class='btn btn-primary mx-5 my-5'>logout</a>")
-        print("<h1 class='text-center my-5'>Hello %s</h1>"%(student_name))
+
+        # C = cookies.SimpleCookie()
+        # C["adminName"] = student_name
+        # C["adminName"]["path"] = "/cookie"
+        
+        redirectURL = "http://localhost/python/admin_panel/dashboard.py"
+        print('<html>')
+        print('  <head>')
+        print('    <meta http-equiv="refresh" content="0;url='+str(redirectURL)+'" />') 
+        print('  </head>')
+        print('</html>')
+
+        # print("<a href='dashboard.py' class='btn btn-primary mx-5 my-5'>Dashboard</a>")
+        # print("<a href='login.html' class='btn btn-primary mx-5 my-5'>logout</a>")
+        # print("<h1 class='text-center my-5'>Hello %s</h1>"%(student_name))
         
     else:
         print("<a href='login.html' class='btn btn-primary mx-5 my-5'>Login</a>")

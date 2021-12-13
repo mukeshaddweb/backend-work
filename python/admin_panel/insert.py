@@ -25,6 +25,14 @@ print("<body>")
 try:
     cursor.execute("insert into students(student_id,student_name,student_email,student_branch,student_password) values('%s','%s','%s','%s','%s')"%(student_id,student_name,student_email,student_branch,student_password))
     db.commit()
+
+    redirectURL = "http://localhost/python/admin_panel/dashboard.py"
+    print('<html>')
+    print('  <head>')
+    print('    <meta http-equiv="refresh" content="0;url='+str(redirectURL)+'" />') 
+    print('  </head>')
+    print('</html>')
+
     print("<a href='dashboard.py' class='btn btn-primary mx-5 my-3'>Dashboard</a>")
     print("<h1 class='text-center mt-5'>Data Inserted</h1>")
 

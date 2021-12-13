@@ -25,6 +25,14 @@ try:
     # print("<h1 class='text-center my-5'>student id : %s</h1>"%(student_id))
     cursor.execute("DELETE FROM students WHERE student_id=%s"%(student_id))
     db.commit()
+
+    redirectURL = "http://localhost/python/admin_panel/dashboard.py"
+    print('<html>')
+    print('  <head>')
+    print('    <meta http-equiv="refresh" content="0;url='+str(redirectURL)+'" />') 
+    print('  </head>')
+    print('</html>')
+
     # data = cursor.fetchone()
 
     # if(data):

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id"
+        content="749400931559-u4gbgjpl5pq37utrr31t5fqhfp1b2v62.apps.googleusercontent.com">
+    <title>Document</title>
+    <style>
+        .body {
+            height: 100%;
+        }
+
+        #map {
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="weather">
+        <h1>get weather</h1>
+        <div>
+            <input class="inputCity" type="text">
+            <input type="submit" class="submit" name="submit">
+        </div>
+
+        <div class="show">
+            <p class='desc'></p>
+            <p class="temp"></p>
+
+        </div>
+    </div>
+
+    <div class="signin">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+
+    <div class="translater">
+        <h1>My Web Page</h1>
+
+        <p>Hello everybody!</p>
+
+        <p>Translate this page:</p>
+
+        <div id="google_translate_element"></div>
+        <p>You can translate the content of this page by selecting a language in the select box.</p>
+    </div>
+
+
+    <h1>My google map</h1>
+    <div id="map">
+
+        <script>
+            // function initMap(){
+            //     var options = {
+            //         zoom: 8,
+            //         center:{lat:26.9124, lng:-75.7873}
+            //     }
+            // }
+
+            let map;
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: 26.9124, lng: 75.7873 },
+                    zoom: 8,
+                });
+            }
+        </script>
+        <script src="weather.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Name: ' + profile.getName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            }
+
+            function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+        </script>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4MFJL_OHC-oK1bZqBjFN5YZrAr2-KZjs&callback=initMap">
+            </script>
+
+
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

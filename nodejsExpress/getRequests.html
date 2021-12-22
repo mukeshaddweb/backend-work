@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>javascript fetch api</h1>
+        <p>Write your requests in the script and watch the console and network logs.</p>
+
+
+        <script>
+            // get all to dos
+            fetch('https://jsonplaceholder.typicode.com/todos/5')
+            .then(Response => Response.json())
+            .then(json => console.log(json))
+            
+            
+        </script>
+    </body>
+</html>

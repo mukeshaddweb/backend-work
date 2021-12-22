@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Get hands on with JavaScript’s Fetch API</h1>
+    <p>Write your requests in the script and watch the console and network logs.</p>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos', {
+            method:'POST',
+            body: JSON.stringify({
+                userId:1,
+                title:"feed the meow",
+                completed: false
+            }),
+            headers:{
+                "Content-type":"application/json; charset=UTF-8"
+            }
+        })
+        .then(Response => Response.json())
+        .then(json => console.log(json))
+    </script>
+</body>
+</html>
